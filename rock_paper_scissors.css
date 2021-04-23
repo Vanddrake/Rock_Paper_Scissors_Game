@@ -1,0 +1,189 @@
+/*
+  Author:   Robert Zaranek
+  Date:     November 11, 2020
+
+  Purpose:  The CSS styling for the "Rock-Paper-Scissors" game.
+*/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    }
+
+body {
+    background-color: rgb(110, 110, 110);
+}
+
+/* MAIN FORM */
+
+#player_info_form {
+    width: 310px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: gray;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+fieldset {
+    margin: 10px 0;
+}
+
+input {
+    margin: 5px 0;
+    color: black;
+}
+
+legend {
+    padding: 0 10px;
+}
+
+input[type=submit] {
+    display: block;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px auto;
+    color: white;
+    background-color: rgb(0, 131, 0);
+    box-shadow: 0 5px black;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(0, 165, 0);
+}
+
+input[type=submit]:active {
+    background-color: rgb(0, 165, 0);
+    box-shadow: 0 2px black;
+    transform: translateY(3px);
+}
+
+/* GAME SCREEN */
+
+@media screen and (min-width: 880px) {
+    #game_screen {
+        width: 800px;
+    }
+    
+    #img_position_container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 879px) {
+    #game_screen {
+        width: 310px;
+    }
+}
+
+#game_screen {
+    display: none;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: gray;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.img_container, .img_container2 {
+    position: relative;
+    display: grid;
+    grid: auto / auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(184, 184, 184);
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 10px black;
+}
+
+.img_container:hover {
+    opacity: 0.8;
+}
+
+.img_container:active {
+    opacity: 0.8;
+    box-shadow: 0 5px black;
+    transform: translateY(5px);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow( 5px 5px 5px black);
+}
+
+#rock, #rock2 {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    height: 75%;
+    width: 75%;
+}
+
+#help_button {
+    background-color: rgb(206, 117, 0);
+    padding: 10px;
+}
+
+#help_button:hover, #help_button:active {
+    background-color: rgb(255, 145, 0);
+}
+
+/* HELP SCREEN */
+
+#help_screen {
+    display: none;
+    position: fixed;
+    height: 220px;
+    width: 330px;
+    top: 10px;
+    margin: 5% auto;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+
+    padding: 5px;
+    text-align: center;
+    border: 2px solid rgb(247, 160, 0);
+    background: rgb(196, 62, 0);
+}
+
+ul {
+    margin: 0 5px 0 5px;
+    padding: 0 5px 0 15px;
+}
+
+/* OPPONENT SCREEN */
+
+#opponent_screen, #results_screen {
+    display: none;
+    width: 310px;
+    height: 320px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: gray;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.img_container2 {
+    display: none;
+}
+
+/* RESULTS SCREEN */
+
+.img_container3 {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,97 @@
+<!-- 
+    Author:   Robert Zaranek
+    Date:     November 11, 2020
+
+    Purpose:  The HTML5 portion of the "Rock-Paper-Scissors" game.
+ -->
+
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Rock-Paper-Scissors VS. The Computer!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='js/rock_paper_scissors.js'></script>
+    <link href="css/rock_paper_scissors.css" rel="stylesheet" type="text/css">    
+</head>
+
+<body>
+    <main>
+
+        <div id='player_info_form'>
+            <h2>Rock-Paper-Scissors<br>VS.<br>The Computer!</h2>
+            <form id='main_form'>
+                <fieldset>
+                    <legend>Who's Playing?</legend>
+
+                    <span class="input_desc">Your Name:</span>
+                    <input type="text" id="name" placeholder="Your Name" maxlength="50" required><br>
+
+                    <span class="input_desc">Your Age:</span>
+                    <input type="number" id="age" min="1" max="120" required><br>
+
+                    <span class="input_desc">Your Favourite Colour:</span>
+                    <input type="color" id="color"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Best of How Many Rounds?<br>(Odd Number Between 1-25)</legend>
+                    <input type="number" id="round_amount" min="1" max="25" step='2' required>
+                </fieldset>
+                <input type="submit" value="Start Playing!">
+            </form>
+        </div>
+
+        <div id='game_screen'>
+            <h3>placeholder</h3>
+            <h3>placeholder</h3>
+            <h2>Choose Your Move!</h2>
+            <div id='img_position_container'>
+                <div class='img_container'>
+                    <img id='rock' src='img/rock.png' alt='a rock hand gesture' title='Rock'>
+                </div>
+                <div class='img_container'>
+                    <img id='paper' src='img/paper.png' alt='a paper hand gesture' title='Paper'>
+                </div>
+                <div class='img_container'>
+                    <img id='scissors' src='img/scissors.png' alt='a scissors hand gesture' title='Scissors'>
+                </div>
+            </div>
+            <input type="submit" value="Help" id='help_button'>
+        </div>
+
+        <div id='help_screen'>
+            <h2>Instructions</h2>
+            <ul><li>Click the first button to choose 'Rock'</li>
+                <li>Click the second button to choose 'Paper'</li>
+                <li>Click the last button to choose 'Scissors'</li>
+                <li>Then, the computer will make a random choice from those 3</li>
+                <li>Rock beats Scissors. Paper beats Rock. Scissors beats Paper</li>
+                <li>If there is a tie, the rounds do not increase and both players can try again</li></ul>
+        </div>
+
+        <div id='opponent_screen'>
+            <h2>Computer's Turn...</h2>
+            <div class='img_container2'>
+                <img id='rock2' src='img/rock.png' alt='a rock hand gesture' title='Rock'>
+            </div>          
+            <div class='img_container2'>
+                <img id='paper2' src='img/paper.png' alt='a paper hand gesture' title='Paper'>
+            </div>
+            <div class='img_container2'>
+                <img id='scissors2' src='img/scissors.png' alt='a scissors hand gesture' title='Scissors'>
+            </div>
+            <h3>placeholder</h3>
+        </div>
+
+        <div id='results_screen'>
+            <div class='img_container3'>
+                <img id='results_picture' src='img/smiley.png' alt='placeholder'>
+            </div>
+            <h2 id='results_message'>placeholder</h2>
+            <input type="submit" value="Play Again?" id='play_again_button'>
+        </div>
+    </main>
+</body>
+
+</html>
